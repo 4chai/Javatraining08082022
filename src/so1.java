@@ -172,6 +172,7 @@ public class buoi2 {
             default:
                 System.out.println("Lỗi, làm ơn kiểm tra lại thông tin ");
                 break;
+                //hihi
 
         }
     }
