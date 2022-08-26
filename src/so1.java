@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class buoi2 {
+ public class so1 {
     public static void main(String[] args) {
         // comment
         // 1 : Kiểu dữ liệu
@@ -80,7 +80,7 @@ public class buoi2 {
         // System.out.println("Gia tri cua ket qua: " + result);
 
         // int a = 5;
-        // int b = a % 3; // Chia lay phan
+        // int b = a % 3; // Chia lay phan dư
         // System.out.print(b);
 
         // Toán tử so sánh : >, <, ==
@@ -142,37 +142,77 @@ public class buoi2 {
         //     System.out.println("Phan loai: Beo phi cap do 3");
         //     System.out.print("Nguy co phat trien benh: Nguy hiem");
         // 40 bị lỗi k in output
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Mã tài khoản :" );
-        String key = scanner.hasNextLine();
+ //       Scanner scanner = new Scanner(System.in);
+  //      System.out.print("Mã tài khoản :" );
+//        String key = scanner.hasNextLine();
+//
+ //       double total = scanner.nextDouble();
+ //       System.out.print("Tổng số tiền :" );
 
-        double total = scanner.nextDouble();
-        System.out.print("Tổng số tiền :" );
+
+ //       switch (key) {
+  //          case "a":
+  //              System.out.println("Thành viên thuộc loại : Member ");
+ //               System.out.println("Giảm 5 % ");
+ //               System.out.print("Bill = "+ total * 0.05);
+ //               System.out.print(" VND");
+ //               break;
+ //           case "b":
+  //              System.out.println("Thành viên thuộc loại : Vip ");
+  //              System.out.println("Giảm 7 % ");
+  //              System.out.print("Bill = "+ total * 0.07);
+  //              System.out.print(" VND");
+  //              break;
+  //          case "c":
+  //              System.out.println("Thành viên thuộc loại : Diamond ");
+  //              System.out.println("Giảm 15 % ");
+  //              System.out.print("Bill = "+ total * 0.15);
+  //              break;
+
+  //          default:
+ //               System.out.println("Lỗi, làm ơn kiểm tra lại thông tin ");
+  //              break;
+  //      }
 
 
-        switch (key) {
-            case "a":
-                System.out.println("Thành viên thuộc loại : Member ");
-                System.out.println("Giảm 5 % ");
-                System.out.print("Bill = "+ total * 0.05);
-                System.out.print(" VND");
-                break;
-            case "b":
-                System.out.println("Thành viên thuộc loại : Vip ");
-                System.out.println("Giảm 7 % ");
-                System.out.print("Bill = "+ total * 0.07);
-                System.out.print(" VND");
-                break;
-            case "c":
-                System.out.println("Thành viên thuộc loại : Diamond ");
-                System.out.println("Giảm 15 % ");
-                System.out.print("Bill = "+ total * 0.15);
-                break;
+     //   5: Mảng
+        // Array => tất cả đều lưu ở 1 nơi
+// Cách 1: Tạo ra và truyền các phần tử cho mảng
+        //String[] arrNames = {"Tèo", "Tí", "Tủn", "Hoa", "Lan"};
+        // Lấy kích thước của mảng
+        // System.out.print("Kích thước của mảng là" +arrNames.length);
+        // lấy giá trị phần tử theo index
+        // vị trí đầu tiên sẽ có index = 0
+        // Vi trí cuối sẽ là length -1
+       // System.out.print(arrNames[1]);
 
-            default:
-                System.out.println("Lỗi, làm ơn kiểm tra lại thông tin ");
-                break;
+// Cách 2: Tạo ra mảng nhưng chỉ biêt số lượng
+        // String[] arrNames = new String[10];
 
-        }
+// 6: vòng lặp for
+
+        //for (int i = 10; i > -1; i--) {
+        //    System.out.println(i);
+
+        //}
+        //for (int i = 1; i <= 100; i++ ) {
+        //    if (i % 2 == 0) ;
+        //    {
+         //       System.out.println(i);
+        //    }
+        //}
+
+        int[] arrNumber = {2,3,4,5,6,10,1,20,30,15,16,17,18,21,22,23};
+        int min, max;
+        min = max = arrNumber[0];
+        for (int i = 1; i < arrNumber.length; i++)
+            if (arrNumber[i] < min){
+                min = arrNumber[i];
+            } else if (arrNumber[i] > max && arrNumber[i] % 2 == 0){
+                max = arrNumber[i];
+            }
+        System.out.println("so lon nhat la "+max);
+        System.out.println("so nho nhat la "+min);
+
     }
 }
